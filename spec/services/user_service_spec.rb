@@ -39,7 +39,6 @@ RSpec.describe 'HubspotUserService' do
       expect(data.first[:vid]).to be_an(Integer)
       expect(data.first[:isNew]).to be_in([true, false])
 
-      # binding.pry
     end
 
     it 'adds contacts to the list based on the vid numbers' do
