@@ -9,4 +9,8 @@ class User < ApplicationRecord
   has_many :user_properties
   has_many :properties, through: :user_properties
 
+  def self.users_with_inactive_properties
+    User.joins(properties: :user_properties).where("properties.status = 'deactivated'").distinct
+  end
+
 end
