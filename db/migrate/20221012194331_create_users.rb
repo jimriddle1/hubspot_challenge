@@ -7,7 +7,6 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :company_domain
       t.string :email
       t.string :phone
-      t.text :associated_accounts, array: true, default: []
     end
   end
 end
