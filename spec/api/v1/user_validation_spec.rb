@@ -2,10 +2,12 @@ require 'rails_helper'
 
 RSpec.describe 'deposit list' do
 
-  it 'gives me a list of users that have association with property status deactivated' do
+  xit 'gives me a list of users that have association with property status deactivated' do
 
     user1 = User.new(first_name: "Jim", last_name: "Raddle", email: "test@test.com", company: "jims bagels", company_domain: "test.com", phone: "555 555", associated_accounts: [40,41])
-    binding.pry
+    property1 = Property.new(street_address: "test lane", city: "Chicago", state: "IL", postal_code: "jims bagels", company_domain: "test.com", phone: "555 555", associated_accounts: [40,41])
+
+    # binding.pry
 
 
 
