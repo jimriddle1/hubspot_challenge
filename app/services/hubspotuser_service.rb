@@ -49,6 +49,25 @@ class HubspotuserService
 
   end
 
+  def self.add_contacts_to_list(user_vid_array)
+    vid_array = user_vid_array.map do |user|
+      user[:vid]
+    end
+
+    data = {
+      "vids": vid_array
+    }
+
+    response = connection.post 'contacts/v1/lists/202210/add' do |req|
+      req.headers[:content_type] = 'application/json'
+      req.body = JSON.generate(data)
+    end
+    
+    body = JSON.parse(response.body, symbolize_names: true)
+
+  end
+
+
 
   def self.connection
     Faraday.new(url: 'https://api.hubapi.com',
