@@ -1,4 +1,4 @@
-[  
+[
   {
     "account_id": "39",
     "street_address": "216 North May",
@@ -62,5 +62,5 @@
     "state": "IL",
     "postal_code": "60607",
     "status": "active"
-  },
+  }
 ]
