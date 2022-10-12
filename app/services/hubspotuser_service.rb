@@ -42,7 +42,10 @@ class HubspotuserService
     end
   end
 
-  def create_users_with_deactivated_properties(user_array)
+  def self.create_users_with_deactivated_properties
+    User.users_with_inactive_properties.map do |user|
+      HubspotuserService.create_user(user)
+    end
 
   end
 
