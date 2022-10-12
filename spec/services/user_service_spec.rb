@@ -19,8 +19,8 @@ RSpec.describe 'HubspotUserService' do
 
     it 'posts a set of users that have deactivated properties' do
       user1 = User.create(first_name: "Jim", last_name: "Raddle", email: "test@test.com", company: "jims bagels", company_domain: "test.com", phone: "555 555")
-      user2 = User.create(first_name: "Ralph", last_name: "Raddle", email: "test@test.com", company: "jims bagels", company_domain: "test.com", phone: "555 555")
-      user3 = User.create(first_name: "Steve", last_name: "Raddle", email: "test@test.com", company: "jims bagels", company_domain: "test.com", phone: "555 555")
+      user2 = User.create(first_name: "Ralph", last_name: "Raddle", email: "test_2@test.com", company: "jims bagels", company_domain: "test.com", phone: "555 555")
+      user3 = User.create(first_name: "Steve", last_name: "Raddle", email: "test_3@test.com", company: "jims bagels", company_domain: "test.com", phone: "555 555")
       property1 = Property.create(street_address: "test lane", city: "Chicago", state: "IL", postal_code: "12345", status: "deactivated")
       property2 = Property.create(street_address: "test lane", city: "Naperville", state: "IL", postal_code: "12345", status: "active")
       property3 = Property.create(street_address: "test lane", city: "Rockford", state: "IL", postal_code: "12345", status: "deactivated")
@@ -31,6 +31,15 @@ RSpec.describe 'HubspotUserService' do
       user_property4 = UserProperty.create(user: user3, property: property3)
 
       parsed_json = HubspotuserService.create_users_with_deactivated_properties
+      data = parsed_json
+
+      expect(data).to be_an Array
+      expect(data.first).to include :vid, :isNew
+
+      expect(data.first[:vid]).to be_an(Integer)
+      expect(data.first[:isNew]).to be_in([true, false])
+
+      # binding.pry
     end
 
 
