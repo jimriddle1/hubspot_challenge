@@ -21,8 +21,8 @@ RSpec.describe User, type: :model do
     it 'should return me a list of all the users that have properties that are disalbed' do
 
       user1 = User.create(first_name: "Jim", last_name: "Raddle", email: "test@test.com", company: "jims bagels", company_domain: "test.com", phone: "555 555")
-      user2 = User.create(first_name: "Ralph", last_name: "Raddle", email: "test@test.com", company: "jims bagels", company_domain: "test.com", phone: "555 555")
-      user3 = User.create(first_name: "Steve", last_name: "Raddle", email: "test@test.com", company: "jims bagels", company_domain: "test.com", phone: "555 555")
+      user2 = User.create(first_name: "Ralph", last_name: "Raddle", email: "other_test@test.com", company: "jims bagels", company_domain: "test.com", phone: "555 555")
+      user3 = User.create(first_name: "Steve", last_name: "Raddle", email: "third_test@test.com", company: "jims bagels", company_domain: "test.com", phone: "555 555")
       property1 = Property.create(street_address: "test lane", city: "Chicago", state: "IL", postal_code: "12345", status: "deactivated")
       property2 = Property.create(street_address: "test lane", city: "Naperville", state: "IL", postal_code: "12345", status: "active")
       property3 = Property.create(street_address: "test lane", city: "Rockford", state: "IL", postal_code: "12345", status: "deactivated")
