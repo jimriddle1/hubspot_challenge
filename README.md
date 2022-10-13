@@ -2,15 +2,15 @@
 
 # Overview
 
-- Take Home challenge in which the task was to expose three endpoints of a sample tea subscription service
-- Explores a many to many relationship, where Customers have many Teas through Subscriptions, and vice versa
+- Take Home challenge in which the task was to consume two different end points using only users that had deactivated properties
+- Explores a many to many relationship, where Users have many Properties through UserProperties, and vice versa
 
 ---
 
 # Learning Goals
 
-- Sad path testing and functionality
-- Expose an API for CRUD functionality
+- Active Record Query to find Users with deactivated properties
+- Consume an API for two different post requests
 
 ---
 
