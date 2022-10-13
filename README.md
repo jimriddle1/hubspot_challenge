@@ -2,14 +2,14 @@
 
 # Overview
 
-- Take Home challenge in which the task was to consume two different end points using only users that had deactivated properties
+- Take Home challenge in which the task was to consume two different end points using only Users that had deactivated Properties
 - Explores a many to many relationship, where Users have many Properties through UserProperties, and vice versa
 
 ---
 
 # Learning Goals
 
-- Active Record Query to find Users with deactivated properties
+- Active Record Query to find Users with deactivated Properties
 - Consume an API for two different post requests
 
 ---
