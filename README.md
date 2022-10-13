@@ -16,7 +16,7 @@
 
 # Schema - 
 
-![Screen Shot 2022-09-22 at 4 17 10 PM](https://user-images.githubusercontent.com/99755958/191854081-8dfd79c1-cb68-4985-a161-bc34cd2a516c.png)
+![Screen Shot 2022-10-12 at 7 04 17 PM](https://user-images.githubusercontent.com/99755958/195470807-563a5e9c-9581-464b-a83f-91cae6414689.png)
 
 ---
 
