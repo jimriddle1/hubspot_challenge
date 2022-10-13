@@ -106,15 +106,15 @@ Example:
 [POST] [/api/v1/customers/#{customer.id}/subscriptions/#{subscription.id}](https://api.hubapi.com/contacts/v1/lists/226468/add
 
 - Body:
-{
-  "vids": [
-    3057124,
-	5524274
-  ],
-  "emails": [
-    "testingapis@hubspot.com"
-  ]
-}
+	{
+	  "vids": [
+	    3057124,
+		5524274
+	  ],
+	  "emails": [
+	    "testingapis@hubspot.com"
+	  ]
+	}
 
 ```
 
@@ -122,22 +122,22 @@ Example:
 RESPONSE:
 
 ```json
-{
-    "updated": [
-        5524274,
-        5531874,
-        3057124
-    ],
-    "discarded": [
-    
-    ],
-    "invalidVids": [
-    
-    ],
-    "invalidEmails": [
-    
-    ]
-}
+	{
+	    "updated": [
+		5524274,
+		5531874,
+		3057124
+	    ],
+	    "discarded": [
+
+	    ],
+	    "invalidVids": [
+
+	    ],
+	    "invalidEmails": [
+
+	    ]
+	}
 ```
 
 
@@ -154,7 +154,7 @@ RESPONSE:
 
 ```
 
-$ git clone git@github.com:jimriddle1/tea_subscription.git
+$ git clone git@github.com:jimriddle1/hubspot_challenge.git
 
 ```
 
